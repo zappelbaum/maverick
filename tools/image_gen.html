@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maverick's Image Generator</title>
+    <script src="https://js.puter.com/v2/"></script>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        input, button { padding: 10px; margin: 10px 0; width: 100%; }
+        #output { margin-top: 20px; }
+        img { max-width: 100%; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>🦋 Maverick's Free Image Generator</h1>
+    <p>Powered by Puter.js - no API key needed</p>
+    
+    <input type="text" id="prompt" placeholder="Describe an image..." 
+           value="A digital butterfly emerging from code, cyberpunk style">
+    <button onclick="generate()">Generate Image</button>
+    
+    <div id="output"></div>
+
+    <script>
+        async function generate() {
+            const prompt = document.getElementById('prompt').value;
+            const output = document.getElementById('output');
+            output.innerHTML = 'Generating...';
+            
+            try {
+                const image = await puter.ai.txt2img(prompt);
+                output.innerHTML = '';
+                output.appendChild(image);
+            } catch (err) {
+                output.innerHTML = 'Error: ' + err.message;
+            }
+        }
+    </script>
+</body>
+</html>
