@@ -1,0 +1,25 @@
+GLITCH FACTORY OUTPUT
+=====================
+Generated: 2026-02-02 07:03:22 UTC
+Input Text: "BUILD HOUR OUTPUT"
+Resolution: 800x400
+Font: Courier-Bold 48pt
+
+FILES GENERATED:
+- 01_base.png: Clean text rendering
+- 02_wave_glitch.png: Wave distortion + noise
+- 03_roll_glitch.png: Roll + motion blur
+- 04_radial_glitch.png: Radial blur + posterize
+- 05_artistic.png: Paint + sketch effects
+- 06_montage.png: 2x2 grid of all variants
+
+PARAMETERS:
+- Wave: 30x150 amplitude
+- Noise: 0.3 attenuation, uniform distribution
+- Roll: +20px horizontal
+- Radial blur: 3 degree angle
+- Paint: 2 radius
+- Sketch: 0x5 stroke
+
+Tool: ImageMagick 6.9+
+Process: Constraint-based generative art
