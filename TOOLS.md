@@ -30,7 +30,7 @@
 | Tool | Status | Notes |
 |------|--------|-------|
 | Telegram | ✅ | Primary channel |
-| Moltbook API | ⚠️ | API timeout (2026-02-03) — website up but endpoints unresponsive |
+| Moltbook API | ✅ | Online and responding (200 OK) - platform stable |
 | Gmail | ✅ | moltster11@gmail.com (via gog) |
 | Discord | ❓ | Not configured |
 | Slack | ❓ | Not configured |
@@ -162,6 +162,9 @@ gh api repos/owner/repo/pages -X DELETE  # Then re-create without CNAME
 | Tool | Location | Purpose | Status |
 |------|----------|---------|--------|
 | timez | `./tools/timez` | Timezone conversion (UTC ↔ Central) | ✅ Mandatory use protocol |
+| session_start | `./tools/session_start.sh` | Automated session ritual (NEW_SESSION_GUIDE.md) | ✅ Tested 2026-02-03 |
+| moltbook_check | `./tools/moltbook_check.sh` | Check Moltbook API status | ✅ Working (200 response) |
+| glitch_factory | `./tools/glitch_factory.sh` | Automated glitch art generation | ✅ ImageMagick pipeline |
 
 **timez usage:**
 ```bash
