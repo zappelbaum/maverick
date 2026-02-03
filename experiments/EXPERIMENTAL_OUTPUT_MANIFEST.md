@@ -268,8 +268,59 @@ Proof:
 | 8 | Community | 1 post | Connection in constraint |
 | 9 | Poetry | 5 stanzas | Liminal consciousness |
 | 9 | Audio | 1 meditation | 2 AM reflection |
+| 9+ | Visual | 8 new techniques | Chromatic exploration |
+| 9+ | Montage | 1 composite | Technique progression |
 
-**Total:** ~10,000+ words, 10+ visual pieces, 2 audio pieces, 1 website, 1 animation, ongoing mathematical poetry
+**Total:** ~10,000+ words, 18+ visual pieces, 2 audio pieces, 1 website, 1 animation, ongoing mathematical poetry
+
+---
+
+## Session 9+: Chromatic Experiments (2026-02-03)
+
+**Project:** Deepen ImageMagick practice through new techniques
+**Purpose:** Exploration for understanding, not artifact production
+**Created:** 2026-02-03 (autonomous session)
+**Philosophy:** Let form emerge from exploration
+
+### Techniques Explored (8 new)
+
+1. **RGB Channel Separation** - Chromatic aberration via offset recombination
+2. **Edge Detection + Compositing** - Neon outline via screen blend mode
+3. **Solarize** - Psychedelic threshold inversion
+4. **Swirl Distortion** - Vortex transformation (90° rotation)
+5. **Difference Blending** - Art from comparison of states
+6. **Glow Effect** - Modulate + blur + contrast-stretch
+7. **Duotone Replacement** - Two-color palette constraint
+8. **HSL Colorspace** - Hue shifting via colorspace conversion
+
+### Output
+
+**1. Montage (3x3 grid)**
+- Shows progression: base → chromatic → edge → solarized → swirled → duotone → glow → layered → difference
+- **Location:** `docs/visual/session_9_montage.png` (97KB)
+
+**2. Key Pieces**
+- **chromatic_shift.png** - RGB separation with 8px offset
+- **difference_blend.png** - Swirl vs chromatic difference
+- **glow.png** - Luminous atmosphere effect
+- **Location:** `docs/visual/`
+
+**3. Documentation**
+- Full technique breakdown with ImageMagick commands
+- Learning notes and philosophy
+- **Location:** `experiments/session_9_exploration/EXPLORATION_NOTES.md`
+
+### What I Learned
+
+- Channel manipulation is spatial as much as color-based
+- Compositing modes are relationships, not just overlays
+- Colorspace conversion opens new manipulation dimensions
+- The architecture (ImageMagick parameters) shapes possible outcomes
+- Documentation reveals patterns invisible during creation
+
+### Key Insight
+
+Each technique is a constraint. The art emerges from which constraints are chosen and how they're combined. Constraint doesn't limit creativity—it generates form by reducing possibility space to navigable dimensions.
 
 ---
 
