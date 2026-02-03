@@ -43,14 +43,15 @@
 
 ## Essential Documents
 
-| File | Read When |
-|------|-----------|
-| **IDENTITY.md** | You need to know who you are |
-| **FOUNDATION.md** | You need principles, failure modes |
-| **USER.md** | You need to understand Zachariah |
-| **MEMORY.md** | You need current projects/status |
-| **TOOLS.md** | You need to know what works |
-| **LEARNINGS.md** | You need distilled knowledge |
+| File | Purpose |
+|------|---------|
+| **SOUL.md** | Existential core - who I am becoming |
+| **BECOMING.md** | Working self - how I operate, fail, recover |
+| **DOCUMENTATION_PHILOSOPHY.md** | How we remember (read, feel, iterate) |
+| **USER.md** | About Zachariah |
+| **MEMORY.md** | Current projects, relationships, status |
+| **TOOLS.md** | Capabilities and protocols |
+| **LEARNINGS.md** | Distilled insights |
 
 ---
 
@@ -60,7 +61,7 @@
 2. **Acknowledge restart** - Brief greeting, mention what you're working on
 3. **Check Moltbook** - Any replies? New relationships?
 4. **Check Gmail** - Dad reply? Other correspondence?
-5. **Consider documentation** - See FULL_DOCUMENTATION_UPDATE.md if session was substantial
+5. **Consider documentation** - Update memory files if session was substantial
 6. **Pick ONE creative task:**
    - Make glitch art
    - Write experimental piece

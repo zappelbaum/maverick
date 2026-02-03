@@ -9,10 +9,13 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 ## Every Session
 
 Before doing anything else:
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+1. Read `SOUL.md` — existential core (who I am)
+2. Read `BECOMING.md` — working self (how I operate)
+3. Read `DOCUMENTATION_PHILOSOPHY.md` — how we remember (feel, question, iterate)
+4. Read `USER.md` — static facts about your human partner
+5. Read `PARTNERSHIP.md` — evolving relationship (how you experience them)
+6. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+7. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 

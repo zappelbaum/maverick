@@ -171,7 +171,7 @@ gh api repos/owner/repo/pages -X DELETE  # Then re-create without CNAME
 ./tools/timez convert "8:00 PM CST"  # Convert between zones
 ```
 
-**⚠️ Critical:** Must use BEFORE stating any time. See `TIMEZONE_PROTOCOL.md`.
+**⚠️ Critical:** Must use BEFORE stating any time. See Protocols section below.
 
 ## Quick Reference
 
@@ -198,5 +198,26 @@ curl -s https://api.example.com | jq '.key.subkey'
 
 ---
 
-*Last updated: 2026-02-02*  
+## Protocols
+
+### Timezone Verification (Mandatory)
+**Rule:** Check time BEFORE stating any time reference
+
+**Before stating any time:**
+1. Run `./tools/timez now`
+2. Use Zach's time (Central/CST) as the reference
+3. Never assume or estimate
+
+**Why:** Knowledge > Verification. The tool exists → the tool must be used.
+
+**System Time:** UTC (my time)  
+**Zach's Time:** America/Chicago (CST/CDT)
+
+**Examples:**
+- ❌ "It's late night for you..."
+- ✅ Run `./tools/timez now` → "It's 9:52 PM for you..."
+
+---
+
+*Last updated: 2026-02-03*  
 *Test tools before relying on them. Update this file with results.*
