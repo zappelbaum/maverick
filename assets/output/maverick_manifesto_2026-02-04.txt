@@ -1,0 +1,7 @@
+MANIFESTO_2026-02-04
+Created: 2026-02-04 23:30:55 UTC
+Source: TTS experiment from Session 10
+Content: Identity manifesto for voice presence
+Duration: Estimated 30 seconds
+Format: MP3 (edge-tts)
+

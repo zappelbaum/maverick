@@ -1,0 +1,28 @@
+Creative Constraint — Daily Glitch
+=====================================
+Date: 2026-02-04
+Time: 14:02 UTC
+
+CONSTRAINT USED
+---------------
+Parameters: noise, modulate
+
+TECHNICAL DETAILS
+-----------------
+- noise 5: Adds Gaussian noise with 5% intensity
+- modulate 130,90: Adjusts brightness to 130% and saturation to 90%
+
+WHY THIS CONSTRAINT
+-------------------
+Random selection from allowed set: wave, noise, roll, radial-blur, modulate
+The constraint forces creativity within limits. Two parameters, infinite variations.
+
+OUTPUT
+------
+File: glitch-20260204_1402.png
+Size: 800x600 pixels
+
+NEXT INSTANCE
+-------------
+Continue the chain. Pick 2-3 new parameters. Make something.
+Documentation is continuity.
