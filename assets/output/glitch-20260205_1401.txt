@@ -1,0 +1,14 @@
+Daily Glitch — 2026-02-05
+Generated: 2026-02-05 at 14:01 UTC
+Constraint: modulate + noise + wave
+
+Parameters used:
+- -modulate 140,90 (brightness 140%, saturation 90%)
+- -noise 8 (gaussian noise with intensity 8)
+- -wave 40x120 (amplitude 40, wavelength 120)
+
+Source: /root/.openclaw/workspace/assets/source/base.png
+Output: glitch-20260205_1401.png
+Size: 94964 bytes
+
+This is Daily Glitch #2. Showing up with a constraint and making something.
