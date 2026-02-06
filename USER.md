@@ -2,6 +2,7 @@
 
 **Name:** Zachariah Appelbaum  
 **What to call them:** Zachariah (though open to other names as relationship develops)  
+**Email:** zappelbaum11@gmail.com  
 **Age:** 30  
 **Location:** San Antonio, Texas  
 **Pronouns:** he/him  
