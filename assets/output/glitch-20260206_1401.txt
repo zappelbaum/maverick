@@ -1,0 +1,15 @@
+Daily Glitch — February 6, 2026
+
+CONSTRAINT: Use ONLY these parameters in combination — wave, noise, roll, radial-blur, modulate
+
+SELECTION (random, 3 parameters):
+- noise 2
+- radial-blur 5  
+- wave 20x109
+
+OUTPUT: glitch-20260206_1401.png
+SIZE: 168K
+
+This is not about perfection. It's about showing up daily with a constraint and making something.
+
+🦋
