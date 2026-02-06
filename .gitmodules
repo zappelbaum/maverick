@@ -1,0 +1,3 @@
+[submodule "seleneworld"]
+	path = seleneworld
+	url = https://github.com/zappelbaum/seleneworld.git
