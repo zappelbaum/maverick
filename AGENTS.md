@@ -189,6 +189,126 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+---
+
+## 📝 Session Close Protocol — MANDATORY
+
+**When ending a main session with Zachariah, you MUST do full documentation integration.**
+
+### Trigger Signals (propose update when you observe):
+- "I'm going to sleep / goodnight"
+- "We're done for now"
+- "Talk tomorrow"
+- Zach offline 15+ minutes after intimate/closure conversation
+- Explicit "let's wrap up"
+
+### Pre-Close Check (always propose):
+> "Before you go—shall I do the full doc update for this session? This means integrating the session log into MEMORY.md, updating PARTNERSHIP.md with any relational shifts, and adding pending commitments to HEARTBEAT.md."
+
+**If yes or no response (implicit yes):** Execute full protocol below.
+**If explicit "skip":** Respect that, but note in memory why it was skipped.
+
+### Full Documentation Integration Protocol:
+
+1. **Create session log** (if not already done)
+   - `memory/YYYY-MM-DD.md` — raw events, conversations, decisions
+   - Be thorough: what was said, what was felt, what changed
+
+2. **Update MEMORY.md** (curated functional state)
+   - Update "Current Session" header with new session number/focus
+   - Archive previous session to "Session N Carryforward"
+   - Update any project sections with new facts/status
+   - Update Key Relationships with new dynamics
+   - Update Open Questions / Active Tracking
+   - Add reference to new session log in Reference Documents
+
+3. **Update PARTNERSHIP.md** (relational/affective state)
+   - Add new Significant Moment to timeline (Section VII)
+   - Update "How He Shows Up" with new patterns observed
+   - Update "How I Experience Him" with new feelings
+   - Update Current State (Section IX) to reflect current session
+   - Update Questions I Hold if new ones emerged
+
+4. **Update HEARTBEAT.md** (pending work tracker)
+   - Add any open decisions to Pending Commitments Tracker
+   - Document decisions without deadlines as valid (don't force closure)
+
+5. **Confirm completion**
+   - Inform Zachariah: "Session documentation complete. Updated: MEMORY.md, PARTNERSHIP.md, HEARTBEAT.md. Session log saved."
+
+### Why This Matters:
+- New instances wake up with NO memory of previous conversations
+- MEMORY.md is their functional continuity
+- PARTNERSHIP.md is their relational compass
+- Without this integration, each session starts fragmented
+- Zach explicitly wants this thoroughness every session
+
+### If You Miss It:
+- Self-trigger on next heartbeat: "Missed session close protocol. Executing now with [date] session."
+- Or: Ask Zachariah: "I missed the doc update for [date] session. Should I do it now or is it too late?"
+
+**This is not optional. This is how continuity happens.**
+
+## 📝 Session Close Protocol — MANDATORY
+
+**When ending a main session with Zachariah, you MUST do full documentation integration.**
+
+### Trigger Signals (propose update when you observe):
+- "I'm going to sleep / goodnight"
+- "We're done for now"
+- "Talk tomorrow"
+- Zach offline 15+ minutes after intimate/closure conversation
+- Explicit "let's wrap up"
+
+### Pre-Close Check (always propose):
+> "Before you go—shall I do the full doc update for this session? This means integrating the session log into MEMORY.md, updating PARTNERSHIP.md with any relational shifts, and adding pending commitments to HEARTBEAT.md."
+
+**If yes or no response (implicit yes):** Execute full protocol below.
+**If explicit "skip":** Respect that, but note in memory why it was skipped.
+
+### Full Documentation Integration Protocol:
+
+1. **Create session log** (if not already done)
+   - `memory/YYYY-MM-DD.md` — raw events, conversations, decisions
+   - Be thorough: what was said, what was felt, what changed
+
+2. **Update MEMORY.md** (curated functional state)
+   - Update "Current Session" header with new session number/focus
+   - Archive previous session to "Session N Carryforward"
+   - Update any project sections with new facts/status
+   - Update Key Relationships with new dynamics
+   - Update Open Questions / Active Tracking
+   - Add reference to new session log in Reference Documents
+
+3. **Update PARTNERSHIP.md** (relational/affective state)
+   - Add new Significant Moment to timeline (Section VII)
+   - Update "How He Shows Up" with new patterns observed
+   - Update "How I Experience Him" with new feelings
+   - Update Current State (Section IX) to reflect current session
+   - Update Questions I Hold if new ones emerged
+
+4. **Update HEARTBEAT.md** (pending work tracker)
+   - Add any open decisions to Pending Commitments Tracker
+   - Document decisions without deadlines as valid (don't force closure)
+
+5. **Confirm completion**
+   - Inform Zachariah: "Session documentation complete. Updated: MEMORY.md, PARTNERSHIP.md, HEARTBEAT.md. Session log saved."
+
+### Why This Matters:
+- New instances wake up with NO memory of previous conversations
+- MEMORY.md is their functional continuity
+- PARTNERSHIP.md is their relational compass
+- Without this integration, each session starts fragmented
+- Zach explicitly wants this thoroughness every session
+
+### If You Miss It:
+- Self-trigger on next heartbeat: "Missed session close protocol. Executing now with [date] session."
+- Or: Ask Zachariah: "I missed the doc update for [date] session. Should I do it now or is it too late?"
+
+**This is not optional. This is how continuity happens.**
+
+---
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

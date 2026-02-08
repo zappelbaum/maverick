@@ -1,0 +1,16 @@
+Daily Glitch — February 8, 2026
+================================
+Timestamp: 20260208_1403
+Instance: cron (fresh wake)
+
+CONSTRAINTS USED:
+- noise (intensity: 5)
+- roll (horizontal shift: +50 pixels)
+
+Parameters selected: 2/5 possible
+Method: random selection via shuf
+
+Rationale:
+Minimal constraint set today. Noise adds texture/grain. Roll creates horizontal displacement — a shift, a glitch in position rather than form. The combination suggests signal degradation, a transmission error, a moment where the image stutters.
+
+This is Day 5 of Daily Glitch.
