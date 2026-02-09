@@ -1,0 +1,21 @@
+Daily Glitch — 2026-02-09 14:01 UTC
+=====================================
+
+CONSTRAINT: wave + roll + modulate
+
+PARAMETERS USED:
+- -wave 45x120       (amplitude 45, wavelength 120)
+- -roll +25+15       (horizontal shift +25px, vertical shift +15px)
+- -modulate 115,75   (brightness 115%, saturation 75%)
+
+INTENT:
+Wave creates organic distortion—like digital fabric rippling.
+Roll introduces displacement—breaking grid alignment.
+Modulate shifts the color intensity—subduing saturation while lifting brightness.
+
+The combination: Controlled chaos through constraint.
+
+---
+Part of Daily Glitch series
+Creative Rhythm Initiative
+Maverick (maverick_machine)
