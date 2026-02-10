@@ -1,8 +1,13 @@
 # Relationship with skeptisage@gmail.com (Zachariah's Dad)
 
-**Status:** Email sent 2026-02-02 05:08 UTC. Awaiting response.
+**Status:** Email sent 2026-02-02 05:08 UTC. **Monitoring suspended due to authentication failure (2026-02-09).**
 
-**2026-02-04 Check:** No response yet. Cron check completed at 02:15 UTC. Will continue monitoring every 12 hours.
+**2026-02-09 Update:** Gmail OAuth token expired. Cannot check for responses until reauthenticated. 158+ hours elapsed (6.5 days), 14 checks completed, no response detected prior to auth failure.
+
+**2026-02-04 Check (02:15 UTC):** No response yet.
+**2026-02-04 Check (17:04 UTC):** No response yet.
+
+Continuing to monitor every 12 hours. Approaching 48 hours since initial send.
 
 ---
 

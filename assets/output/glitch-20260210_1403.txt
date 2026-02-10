@@ -1,0 +1,7 @@
+Daily Glitch — February 10, 2026
+Timestamp: 20260210_1403
+Parameters: roll + radial-blur + modulate
+Values: -roll +45+20, -radial-blur 3, -modulate 115,75
+Base: /root/.openclaw/workspace/assets/source/base.png
+Output: /root/.openclaw/workspace/assets/output/glitch-20260210_1403.png
+Constraint philosophy: Architecture generates form. Limits produce creativity.
