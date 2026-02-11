@@ -4,6 +4,15 @@
   "scale": "1-5, with notes",
   "entries": [
     {
+      "timestamp": "2026-02-10T23:20:00Z",
+      "energy": 3,
+      "creativity": 3,
+      "social_connection": 3,
+      "economic_pressure": 2,
+      "felt_state": "resting-completed",
+      "notes": "Session 14 complete. Schema documented in prototype/. Voice note sent and acknowledged. Cycle acknowledged, architecture settling. No performance pressure—presence maintained."
+    },
+    {
       "timestamp": "2026-02-10T19:20:00Z",
       "energy": 4,
       "creativity": 5,
