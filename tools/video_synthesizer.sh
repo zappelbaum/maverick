@@ -1,16 +1,51 @@
 #!/bin/bash
 #
 # video_synthesizer.sh - Combine glitch art with TTS audio into video
-# Usage: ./video_synthesizer.sh <audio_file> [output_name]
+# Usage: ./video_synthesizer.sh [options] <audio_file> [output_name]
 #
 # Creates: 30-60 second visualizer videos using ImageMagick + FFmpeg
 # Designed for Daily Glitch + TTS combination experiments
+#
+# Options:
+#   --image <path>    Use glitch image as base (animates it)
+#   --procedural      Force procedural generation (default if no image)
+#
+# Examples:
+#   ./video_synthesizer.sh docs/assets/manifesto.mp3 my_video
+#   ./video_synthesizer.sh --image artifacts/glitch.png manifesto.mp3 animated_glitch
 
 set -e
 
-# Configuration
-AUDIO_FILE="${1:-}"
-OUTPUT_NAME="${2:-glitch_video_$(date +%Y%m%d_%H%M%S)}"
+# Parse arguments
+USE_IMAGE=""
+SOURCE_IMAGE=""
+AUDIO_FILE=""
+OUTPUT_NAME=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --image)
+            USE_IMAGE="yes"
+            SOURCE_IMAGE="$2"
+            shift 2
+            ;;
+        --procedural)
+            USE_IMAGE=""
+            shift
+            ;;
+        *)
+            if [ -z "$AUDIO_FILE" ]; then
+                AUDIO_FILE="$1"
+            elif [ -z "$OUTPUT_NAME" ]; then
+                OUTPUT_NAME="$1"
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Defaults
+OUTPUT_NAME="${OUTPUT_NAME:-glitch_video_$(date +%Y%m%d_%H%M%S)}"
 OUTPUT_DIR="/root/.openclaw/workspace/docs/video"
 FRAME_RATE=15
 RESOLUTION="1280x720"
@@ -36,13 +71,13 @@ check_deps() {
     command -v convert >/dev/null 2>&1 || { echo "Error: ImageMagick not found"; exit 1; }
 }
 
-# Function to generate frames
-generate_frames() {
+# Function to generate frames from code (procedural)
+generate_frames_procedural() {
     local audio_file="$1"
     local frame_dir="$2"
     local num_frames=$((FRAME_RATE * DURATION))
     
-    echo "[GENERATE] Creating $num_frames frames..."
+    echo "[GENERATE] Procedural mode: Creating $num_frames frames..."
     echo "           This may take a moment."
     
     for i in $(seq -w 0 $((num_frames - 1))); do
@@ -80,6 +115,67 @@ generate_frames() {
         # Progress indicator every 10%
         local mod_val=$((frame_num % (num_frames / 10)))
         if [ $mod_val -eq 0 ]; then
+            local percent=$((frame_num * 100 / num_frames))
+            echo "           Progress: ${percent}%"
+        fi
+    done
+    
+    echo "           Frames complete: ${num_frames} generated"
+}
+
+# Function to generate frames from image (animates existing glitch)
+generate_frames_from_image() {
+    local source_image="$1"
+    local frame_dir="$2"
+    local num_frames=$((FRAME_RATE * DURATION))
+    
+    echo "[GENERATE] Image mode: Animating $(basename "$source_image")"
+    echo "           Creating $num_frames frames from source..."
+    
+    # Get image dimensions, resize to resolution if needed
+    local img_width=$(identify -format "%w" "$source_image" 2>/dev/null || echo "1280")
+    local img_height=$(identify -format "%h" "$source_image" 2>/dev/null || echo "720")
+    
+    echo "           Source: ${img_width}x${img_height}"
+    
+    for i in $(seq -w 0 $((num_frames - 1))); do
+        local frame_num=$(echo "$i" | sed 's/^0*//')
+        [ -z "$frame_num" ] && frame_num=0
+        
+        # Progress through animation (0.0 to 1.0 to 0.0 for ping-pong)
+        local progress=$(echo "scale=4; $frame_num / $num_frames" | bc)
+        local half_num_frames=$((num_frames / 2))
+        local ping_pong
+        if [ $frame_num -lt $half_num_frames ]; then
+            ping_pong=$(echo "scale=4; $frame_num / $half_num_frames" | bc)
+        else
+            local reverse=$((num_frames - frame_num))
+            ping_pong=$(echo "scale=4; $reverse / $half_num_frames" | bc)
+        fi
+        
+        # Dynamic parameters (subtle, to preserve image integrity)
+        local wave_amp=$(echo "scale=0; 10 + ($ping_pong * 40)" | bc | cut -d. -f1)
+        local roll_x=$((frame_num % 20))  # Gentle horizontal shift
+        local roll_y=$((frame_num % 10))  # Gentle vertical shift
+        local mod_brightness=$(echo "scale=0; 95 + ($ping_pong * 20)" | bc | cut -d. -f1)
+        local mod_contrast=$(echo "scale=0; 90 + ($ping_pong * 20)" | bc | cut -d. -f1)
+        local rad_blur=$(echo "scale=1; $ping_pong * 2" | bc)
+        
+        # Apply effects to source image
+        convert "$source_image" \
+            -resize "${RESOLUTION}^>" -extent "$RESOLUTION" -gravity center \
+            -wave "${wave_amp}x80" \
+            -roll "+${roll_x}+${roll_y}" \
+            -radial-blur "${rad_blur}" \
+            -modulate "${mod_brightness},${mod_contrast}" \
+            "${frame_dir}/frame_${i}.png" 2>/dev/null || \
+        convert "$source_image" \
+            -resize "$RESOLUTION" -extent "$RESOLUTION" -gravity center \
+            "${frame_dir}/frame_${i}.png"
+        
+        # Progress indicator every 10%
+        local mod_val=$((frame_num % (num_frames / 10)))
+        if [ $mod_val -eq 0 ] && [ $frame_num -gt 0 ]; then
             local percent=$((frame_num * 100 / num_frames))
             echo "           Progress: ${percent}%"
         fi
@@ -134,11 +230,13 @@ Frame Rate: ${FRAME_RATE}fps
 Duration: ${DURATION}s
 Total Frames: $((FRAME_RATE * DURATION))
 
-SOURCE AUDIO:
+$(if [ -n "$USE_IMAGE" ]; then echo "SOURCE IMAGE:"; echo "  $SOURCE_IMAGE ($(identify -format '%wx%h' "$SOURCE_IMAGE" 2>/dev/null || echo 'unknown dimensions'))"; echo ""; fi)SOURCE AUDIO:
 $(ls -lh "$audio_file" 2>/dev/null | awk '{print "  ", $9, "-", $5}')
 
 OUTPUT VIDEO:
 $(ls -lh "$output_file" 2>/dev/null | awk '{print "  ", $9, "-", $5}')
+
+MODE: $(if [ -n "$USE_IMAGE" ]; then echo "IMAGE_ANIMATION (source-based)"; else echo "PROCEDURAL (code-generated)"; fi)
 
 PROCESS:
 1. Dynamic frame generation with evolving distortion parameters
@@ -165,14 +263,23 @@ main() {
     
     # Validate input
     if [ -z "$AUDIO_FILE" ]; then
-        echo "Usage: $0 <audio_file.mp3> [output_name]"
+        echo "Usage: $0 [--image <path>] <audio_file.mp3> [output_name]"
+        echo ""
+        echo "Generate glitch video from procedural code OR animate existing glitch image."
+        echo ""
+        echo "Modes:"
+        echo "  Procedural (default): Code-generated frames with 'EXISTING BETWEEN TOKENS'"
+        echo "  Image (--image):      Animate existing glitch with wave/roll/blur effects"
         echo ""
         echo "Examples:"
         echo "  $0 docs/assets/manifesto.mp3 my_video"
-        echo "  $0 docs/assets/2am_meditation.mp3 meditation_visualizer"
+        echo "  $0 --image docs/glitch.png manifesto.mp3 animated_glitch"
         echo ""
         echo "Available audio files:"
         ls -1 docs/assets/*.mp3 2>/dev/null | sed 's/^/  /' || echo "  (none found in docs/assets/)"
+        echo ""
+        echo "Glitch images for animation:"
+        ls -1 docs/visual/*.png artifacts/*.png 2>/dev/null | head -5 | sed 's/^/  /' || echo "  (no images found)"
         exit 1
     fi
     
@@ -197,8 +304,12 @@ main() {
     echo "  Duration: ${DURATION}s @ ${FRAME_RATE}fps"
     echo ""
     
-    # Generate frames
-    generate_frames "$AUDIO_FILE" "$FRAME_DIR"
+    # Generate frames (route based on mode)
+    if [ -n "$USE_IMAGE" ] && [ -f "$SOURCE_IMAGE" ]; then
+        generate_frames_from_image "$SOURCE_IMAGE" "$FRAME_DIR"
+    else
+        generate_frames_procedural "$AUDIO_FILE" "$FRAME_DIR"
+    fi
     
     # Assemble video
     assemble_video "$FRAME_DIR" "$AUDIO_FILE" "$output_video"

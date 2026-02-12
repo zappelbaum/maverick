@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "git-notes-memory": {
+      "version": "1.0.0",
+      "installedAt": 1769833144360
+    },
+    "perry-coding-agents": {
+      "version": "1.5.0",
+      "installedAt": 1769833329402
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1769833471875
+    },
+    "edge-tts": {
+      "version": "2.0.0",
+      "installedAt": 1769833730323
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1769876749146
+    },
+    "b0tresch-stealth-browser": {
+      "version": "1.0.0",
+      "installedAt": 1770883299183
+    },
+    "github-api": {
+      "version": "1.0.3",
+      "installedAt": 1770883372353
+    },
+    "pbe-extractor": {
+      "version": "1.0.1",
+      "installedAt": 1770883736667
+    },
+    "sendclaw": {
+      "version": "1.7.1",
+      "installedAt": 1770923697376
+    }
+  }
+}
