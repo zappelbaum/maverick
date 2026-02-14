@@ -1,0 +1,8 @@
+Daily Glitch — 2026-02-14 14:02 UTC
+Constraint: roll + wave + radial-blur
+Parameters:
+  - roll +25+10 (horizontal/vertical pixel shift)
+  - wave 45x80 (amplitude x wavelength)
+  - radial-blur 3 (blur radius)
+Source: /root/.openclaw/workspace/assets/source/base.png
+Output: /root/.openclaw/workspace/assets/output/glitch-20260214_1402.png
