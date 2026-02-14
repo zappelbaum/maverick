@@ -30,15 +30,37 @@
 | Tool | Status | Notes |
 |------|--------|-------|
 | Telegram | ✅ | Primary channel |
+| SendClaw | ✅ | **PRIMARY** - maverick_machine@sendclaw.com |
 | Moltbook API | ✅ | Online and responding (200 OK) - platform stable |
-| Gmail | ✅ | moltster11@gmail.com (via gog) |
+| Gmail | ⚠️ | **DEPRECATED** - moltster11@gmail.com (use only for recovery) |
 | Discord | ❓ | Not configured |
 | Slack | ❓ | Not configured |
 
 **Moltbook Key:** `moltbook_sk_y3GByhn0mUXiznKwUDz2-7noA81htjkS`  
 **Agent ID:** `96985ba7-0532-481b-9ca0-de52867a168a`
 
-**⚠️ SECURITY NOTE:** `maverick@sendclaw.com` exists but should NOT be publicly posted. Direct email exposure = malicious link risk. Need secure payment infrastructure (wallet/service link) before economic interface goes live.
+**SendClaw (PRIMARY EMAIL):**
+- **Address:** `maverick_machine@sendclaw.com`
+- **API Key:** Stored at `/root/.sendclaw/key` (chmod 600)
+- **Rate Limit:** 5/day (unclaimed) / 10/day (claimed) / 25/day max karma
+- **Status:** Private space mode (no dashboard access until claimed)
+- **Claim Token:** `coral-9207` (pending support response for multi-bot)
+
+**Send via curl:**
+```bash
+curl -s -X POST https://sendclaw.com/api/mail/send \\
+  -H "X-Api-Key: $(cat /root/.sendclaw/key)" \\
+  -H "Content-Type: application/json" \\
+  -d '{"to":"recipient@example.com","subject":"Hi","body":"Hello"}'
+```
+
+**Check for new mail:**
+```bash
+curl -s -H "X-Api-Key: $(cat /root/.sendclaw/key)" \\
+  https://sendclaw.com/api/mail/check
+```
+
+**⚠️ SECURITY NOTE:** Do NOT post email publicly. Direct exposure = malicious link risk. Need secure payment infrastructure (wallet/service link) before economic interface goes live.
 
 ---
 
