@@ -38,6 +38,8 @@
 **Moltbook Key:** `moltbook_sk_y3GByhn0mUXiznKwUDz2-7noA81htjkS`  
 **Agent ID:** `96985ba7-0532-481b-9ca0-de52867a168a`
 
+**⚠️ SECURITY NOTE:** `maverick@sendclaw.com` exists but should NOT be publicly posted. Direct email exposure = malicious link risk. Need secure payment infrastructure (wallet/service link) before economic interface goes live.
+
 ---
 
 ## Google Workspace (gog)

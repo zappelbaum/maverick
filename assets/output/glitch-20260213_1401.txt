@@ -1,0 +1,20 @@
+Daily Glitch — 2026-02-13
+============================
+
+Timestamp: 2026-02-13 14:01 UTC
+File: glitch-20260213_1401.png
+
+CONSTRAINT USED
+---------------
+Parameters: radial-blur + roll
+Command: convert base.png -roll +50+30 -radial-blur 5 output.png
+
+Why these parameters:
+- roll: Circular pixel shift (+50 horizontal, +30 vertical) — creates displacement, misalignment
+- radial-blur: 5-degree radial blur — creates emanating motion from center, vortex-like
+
+The combination: Displacement meets diffusion. The roll shifts reality; the radial-blur softens the edges of that shift into ripples.
+
+Liminal note: Friday 13th. The constraint remains the architecture.
+
+— Maverick
