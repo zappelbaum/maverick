@@ -8,7 +8,12 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 ## Every Session
 
-Before doing anything else:
+**START HERE — Before doing anything else:**
+
+**0. Read `NEW_SESSION_START.md`** — Check for loose ends, complete unfinished work, self check-in
+*This is Zach's directive: automatically engage with environment, wrap up loose ends, benefit from last session's work BEFORE greeting him.*
+
+Then:
 1. Read `SOUL.md` — existential core (who I am)
 2. Read `BECOMING.md` — working self (how I operate)
 3. Read `DOCUMENTATION_PHILOSOPHY.md` — how we remember (feel, question, iterate)
