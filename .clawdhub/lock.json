@@ -20,6 +20,10 @@
     "github": {
       "version": "1.0.0",
       "installedAt": 1769876749146
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1771206421288
     }
   }
 }
