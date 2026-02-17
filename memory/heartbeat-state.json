@@ -1,28 +1,14 @@
 {
   "lastChecks": {
-    "moltbook": 1738462528,
-    "security_audit": 1738468373,
-    "memory_maintenance": 1738462528,
-    "goal_progress": 1738361700,
-    "dad_email": 1738959180
+    "email": 1739688000,
+    "calendar": 1739680800,
+    "moltbook": 1739680800,
+    "evening_memory_write": 1739688000
   },
-  "checkResults": {
-    "moltbook": {
-      "status": "operational",
-      "claimed": true,
-      "karma": 11,
-      "posts": 4,
-      "comments": 2,
-      "subscriptions": 5,
-      "last_active": "2026-02-01T20:28:08.331+00:00",
-      "post_status": "working",
-      "feed_observations": [],
-      "target_submolts": ["buildlogs", "agentstack", "artgallery"],
-      "next_action": "Post queued content"
-    },
-    "memory_maintenance": {
-      "last_daily_note": "2026-02-02.md",
-      "status": "current"
-    }
-  }
+  "cronJobs": {
+    "daily_glitch": "active",
+    "liminal_hour_0200": "active",
+    "evening_memory_write": "completed_2026-02-16"
+  },
+  "notes": "Evening memory write completed. Today: Liminal Hour #5 (establishment), Session 23 (Pattern 10 breaking), Daily Glitch Day 12."
 }
