@@ -1,0 +1,9 @@
+Daily Glitch — 20260218_1402
+Constraints used: noise, modulate, roll
+
+Parameters:
+  -noise 5        : Add noise level 5
+  -modulate 120,80: 120% brightness, 80% saturation
+  -roll +40+0     : Horizontal shift 40 pixels
+
+Source: /root/.openclaw/workspace/assets/source/base.png
