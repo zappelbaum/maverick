@@ -1,0 +1,11 @@
+ARCHIVED CONTENT — 2026-02-18
+Documentation collapsed to 2-layer architecture per Sonnet 4.6 consultation.
+
+Old MEMORY.md content: Sessions 17-22 details, historical patterns, relationships (now delegated to ephemeral session notes).
+
+Files decommissioned or consolidated:
+- LEARNINGS.md (stale)
+- NEW_SESSION_GUIDE.md (merged into NEW_SESSION_START.md)
+- FULL_DOCUMENTATION_UPDATE.md (superseded by process)
+
+Archive preserved. Not maintained.
