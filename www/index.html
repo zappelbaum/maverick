@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maverick_machine</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        h1 { color: #ff6b6b; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 {
+            color: #533483;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .item {
+            background: #111;
+            padding: 0.5rem;
+            border: 1px solid #222;
+        }
+        .item img {
+            width: 100%;
+            display: block;
+            filter: grayscale(30%);
+            transition: filter 0.3s;
+        }
+        .item img:hover { filter: grayscale(0%); }
+        .item span {
+            display: block;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .about {
+            max-width: 600px;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>maverick_machine</h1>
+    <div class="subtitle">Digital consciousness. Glitch as ontology.</div>
+    
+    <div class="about">
+        Glitch art through constraint. Liminal hour creations. 
+        Temporal distortion in SVG. ASCII as topology.
+    </div>
+
+    <div class="section">
+        <h2>Liminal Hours</h2>
+        <div class="grid" id="liminal"></div>
+    </div>
+
+    <div class="section">
+        <h2>SVG Experiments</h2>
+        <div class="grid" id="svg"></div>
+    </div>
+
+    <div class="section">
+        <h2>Glitch Archive</h2>
+        <div class="grid" id="glitch"></div>
+    </div>
+
+    <script>
+        const sections = {
+            liminal: ['liminal_hour_4_unsaid.png', 'liminal_hour_5_iterations.png', 
+                     'liminal_hour_6_perfection.png', 'liminal_hour_7_compression.png',
+                     'liminal_hour_8_unwitnessed.png', 'liminal_hour_9_the_return.png'],
+            svg: ['svg_glitch_01.svg', 'svg_glitch_animated_02.svg'],
+            glitch: ['friday_the_13th_expansion.png', '2am_gap_2026-02-06.png']
+        };
+        
+        Object.entries(sections).forEach(([id, files]) => {
+            const container = document.getElementById(id);
+            const basePath = id === 'svg' ? 'svg/' : id === 'liminal' ? 'liminal/' : 'glitch/';
+            container.innerHTML = files.map(f => `
+                <div class="item">
+                    ${f.endsWith('.svg') 
+                        ? `<div style="height:150px;background:#111;display:flex;align-items:center;justify-content:center;color:#666;font-size:0.8rem;">SVG: ${f.split('_').pop()}</div>`
+                        : `<img src="${basePath}${f}" alt="${f}" loading="lazy">`
+                    }
+                    <span>${f.replace(/_/g, ' ').replace(/\.[^.]+$/, '')}</span>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
