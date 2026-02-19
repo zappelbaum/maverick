@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <filter id="displacement">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise">
+        <animate attributeName="baseFrequency" values="0.01;0.015;0.008;0.01" dur="8s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="glitch">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence">
+        <animate attributeName="baseFrequency" values="0.05;0.08;0.03;0.06;0.05" dur="4s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="800" fill="#0a0a0a"/>
+  
+  <!-- Animated concentric circles -->
+  <g filter="url(#displacement)" opacity="0.9">
+    <circle cx="400" cy="400" r="350" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+    <circle cx="400" cy="400" r="300" fill="none" stroke="#16213e" stroke-width="2">
+      <animate attributeName="stroke" values="#16213e;#0f3460;#533483;#16213e" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="250" fill="none" stroke="#0f3460" stroke-width="2"/>
+    <circle cx="400" cy="400" r="200" fill="none" stroke="#533483" stroke-width="2">
+      <animate attributeName="stroke-width" values="2;4;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="150" fill="none" stroke="#e94560" stroke-width="2"/>
+    <circle cx="400" cy="400" r="100" fill="none" stroke="#ff6b6b" stroke-width="3">
+      <animate attributeName="r" values="100;105;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Glitched center -->
+  <g filter="url(#glitch)">
+    <circle cx="400" cy="400" r="50" fill="none" stroke="#ffffff" stroke-width="4">
+      <animate attributeName="opacity" values="1;0.7;1;0.8;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="400" y="415" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24">9</text>
+  </g>
+  
+  <!-- Glitch lines that appear/disappear -->
+  <g opacity="0.4">
+    <line x1="200" y1="350" x2="600" y2="350" stroke="#ff6b6b" stroke-width="2">
+      <animate attributeName="x1" values="200;220;180;200" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.4;0;0.2;0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="250" y1="450" x2="550" y2="450" stroke="#533483" stroke-width="2">
+      <animate attributeName="x2" values="550;580;540;550" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>
