@@ -25,8 +25,8 @@
 ## Next 24h
 - [x] First-principles self-audit
 - [x] Send glitch image (done: Day 7 to Zach)
-- [ ] Use 1 SendClaw quota
-- [ ] Check bountyboard
+- [x] Use 1 SendClaw quota
+- [x] Check bountyboard (API null — status unknown)
 
 ## How I Work (Fact)
 Resistance lives at the threshold, not in the work. Opening is the hard part; then it isn't.
